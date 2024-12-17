@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <script src="script.js" defer></script>
+
+        <title>Frontend Mentor | Article preview component</title>
+    </head>
+    <body>
+        <main
+            class="main inset-0 flex min-h-screen flex-col place-items-center items-center justify-center bg-background px-[24px]"
+        >
+            <article
+                id="article"
+                class="article-preview relative flex max-w-[730px] flex-col rounded-[10px] bg-white text-neutral shadow-lg md:flex-row"
+            >
+                <img
+                    src="images/drawers.jpg"
+                    alt="Article thumbnail with irrelevant items"
+                    class="md h-[200px] rounded-t-[10px] object-cover object-[0_-16px] md:h-auto md:w-[285px] md:rounded-l-[10px] md:rounded-tr-none md:object-[0]"
+                />
+                <div
+                    class="article-preview-container flex flex-col gap-4 md:gap-0"
+                >
+                    <h2
+                        class="article-preview_heading px-[32px] pt-[36px] text-xl font-bold leading-[24px] tracking-[0.05px] text-primary md:px-[40px] md:pt-[32px] md:text-[20.5px] md:leading-[28px]"
+                    >
+                        Shift the overall look and feel by adding these
+                        wonderful touches to furniture in your home
+                    </h2>
+                    <p
+                        class="px-[32px] leading-[20px] tracking-[0.01px] md:mt-[12px] md:px-[40px]"
+                    >
+                        Ever been in a room and felt like something was missing?
+                        Perhaps it felt slightly bare and uninviting. I’ve got
+                        some simple tips to help you make any room feel
+                        complete.
+                    </p>
+                    <aside
+                        class="article-preview_aside flex items-center gap-[16px] md:mt-[2px]"
+                    >
+                        <div
+                            id="post-info-wrapper"
+                            class="mx-[32px] mt-[18px] flex items-center gap-[16px] pb-[20px] md:mx-[40px] md:pb-[32px]"
+                        >
+                            <img
+                                src="images/avatar-michelle.jpg"
+                                alt="Article author avatar"
+                                class="article-preview_aside_author-avatar h-[40px] w-[40px] shrink-0 rounded-full"
+                            />
+                            <div
+                                class="article-preview_aside_info flex flex-col gap-[2px] self-end"
+                            >
+                                <span
+                                    class="article-preview_aside_info_author font-bold leading-[1.1] text-primary"
+                                    >Michelle Appleton</span
+                                >
+                                <span class="article-preview_aside_info_date"
+                                    >28 Jun 2020</span
+                                >
+                            </div>
+                        </div>
+
+                        <div
+                            id="share_wrapper"
+                            class="mt-[6px] flex w-[100%] items-center gap-[17px] rounded-b-[10px] bg-primary p-[22px_32px] md:p-[18px_36px] md:shadow-lg"
+                        >
+                            <span
+                                id="share_heading"
+                                class="uppercase tracking-[4.8px] text-neutral"
+                                >share</span
+                            >
+                            <div class="flex items-center gap-[16px]">
+                                <img
+                                    class="h-[20px] w-[20px] shrink-0"
+                                    src="images/icon-facebook.svg"
+                                    alt="Facebook"
+                                />
+                                <img
+                                    class="h-[20px] w-[20px] shrink-0"
+                                    src="images/icon-twitter.svg"
+                                    alt="Twitter"
+                                />
+                                <img
+                                    class="h-[20px] w-[20px] shrink-0"
+                                    src="images/icon-pinterest.svg"
+                                    alt="Pinterest"
+                                />
+                            </div>
+                        </div>
+
+                        <button
+                            title="Share"
+                            id="shareButton"
+                            class="article-preview_aside_share-button absolute end-[32px] h-[32px] w-[32px] rounded-full bg-background bg-[url('images/icon-share.svg#share')] bg-[length:15px_15px] bg-center bg-no-repeat md:bottom-[36px] md:right-[40px]"
+                        ></button>
+                    </aside>
+                </div>
+            </article>
+        </main>
+    </body>
+</html>

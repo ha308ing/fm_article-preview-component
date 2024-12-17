@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --very-dark-grayish-blue: 217 19 35;
+        --desaturated-dark-blue: 214 17 51;
+        --grayish-blue: 212 23 69;
+        --light-grayish-blue: 210 46 95;
+    }
+
+    html {
+        font-family: "Manrope", system-ui, sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+#article.share #shareButton {
+    background-image: url("images/icon-share.svg#share_active");
+    background-color: hsl(var(--desaturated-dark-blue));
+    bottom: 15px;
+}
+
+#article.share #post-info-wrapper {
+    display: none;
+}
+
+#article:not(.share) #share_wrapper {
+    display: none;
+}
+
+@media (width>=768px) {
+    #share_wrapper {
+        width: auto;
+        top: 123px;
+        right: -68px;
+    }
+
+    #article.share #post-info-wrapper {
+        display: flex;
+    }
+
+    #article.share #share_wrapper {
+        position: absolute;
+        border-radius: 10px;
+    }
+
+    #article.share #share_wrapper::after {
+        content: " ";
+        position: absolute;
+        top: 100%;
+        left: 45%;
+        width: 25px;
+        aspect-ratio: 1 / cos(60deg);
+        clip-path: polygon(50% 100%, 100% 0, 0 0);
+        background: hsl(var(--very-dark-grayish-blue));
+    }
+
+    #article.share #shareButton {
+        bottom: 36px;
+    }
+}
